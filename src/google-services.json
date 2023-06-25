@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "594840438644",
+    "project_id" : "notification-accidentrescue",
+    "storage_bucket": "notification-accidentrescue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594840438644:android:ad355e9f993f8424450e21",
+        "android_client_info": {
+          "package_name": "com.mycompany.emergency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594840438644-kec96gqpq3uscgj3kh6qcij3tvb8d1ih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxGX4SqziblTdu3U4nqCFdhMgz44MGj-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594840438644-kec96gqpq3uscgj3kh6qcij3tvb8d1ih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

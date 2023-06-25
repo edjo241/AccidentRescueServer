@@ -1,0 +1,49 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "nodemon ./src/main.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ts-engine/runtime": "^1.11.0",
+    "@turf/turf": "^6.5.0",
+    "@types/express-session": "^1.17.3",
+    "async": "^3.2.1",
+    "axios": "^1.3.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "expo-server-sdk": "^3.7.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "firebase-admin": "^11.5.0",
+    "geojson": "^0.5.0",
+    "geolib": "^3.3.3",
+    "helmet": "^6.0.1",
+    "mssql": "^9.1.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "ws": "^8.12.1"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.13",
+    "@types/express-session": "^1.17.3",
+    "@types/multer": "^1.4.7",
+    "async": "^3.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "helmet": "^6.0.1"
+  },
+  "engines": {
+    "npm": "please use yarn",
+    "yarn": ">=1 <2",
+    "node": ">=12"
+  }
+}

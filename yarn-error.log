@@ -1,0 +1,78 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\EdJo\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\EdJo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\EdJo\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Memurai;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\EdJo\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\EdJo\AppData\Local\Programs\Python\Python39;C:\Users\EdJo\AppData\Local\Microsoft\WindowsApps;C:\Users\EdJo\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\heroku\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\EdJo\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.3.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: F:\AccidentRescue\server\package.json: Unexpected token / in JSON at position 680
+      at JSON.parse (<anonymous>)
+      at C:\Users\EdJo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\EdJo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\EdJo\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "private" : true,
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "ts-engine build --node-app",
+      "start": "ts-engine start"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@ts-engine/runtime": "^1.11.0",
+      "@types/express-session": "^1.17.3",
+      "async": "^3.2.1",
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "express-session": "^1.17.3",
+      "helmet": "^6.0.1",
+      "mssql": "^7.2.1",
+      "multer": "^1.4.5-lts.1",
+      "serialize-javascript": "^6.0.1",
+      "ts-engine": "^1.0.2",
+      "typescript": "^4.9.5",
+      "uuid": "^8.3.0"
+    },
+    "devDependencies": {
+      // "@ts-engine/cli": "^3.0.4",
+      // "@ts-engine/eslint-config": "^1.11.0",
+      // "@ts-engine/runtime": "^1.11.0",
+      "@types/express-session": "^1.17.3",
+      "async": "^3.2.1",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "express-session": "^1.17.3",
+      "helmet": "^6.0.1",
+      "mssql": "^7.2.1",   
+      "ts-engine": "^1.0.2",
+      "uuid": "^8.3.0",
+      "yup": "^0.29.3"
+    },
+    "engines": {
+      "npm": "please use yarn",
+      "yarn": ">=1 <2",
+      "node": ">=12"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
