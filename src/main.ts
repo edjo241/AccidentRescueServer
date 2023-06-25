@@ -60,7 +60,7 @@ enableCors:false,
 sendErrors:true
 });
 
-const port= process.env.PORT || 8002
+const port= process.env.PORT || 3000
 
 server.listen(port, ()=> {
     console.log("server is listening on 8001.")
