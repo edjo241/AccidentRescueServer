@@ -4,7 +4,7 @@ exports.loadConfig = void 0;
 const loadConfig = () => {
     return {
         dbConfig: {
-            connectionString: "Server=tcp:arjunnair.database.windows.net,1433;Database=ambulance;Uid=edwin,Pwd={your_password}n;Trusted_Connection=yes;Request Timeout=0"
+            connectionString: "Server=tcp:accidentrescue.database.windows.net,1433;Initial Catalog=AMS;Persist Security Info=False;User ID=edwin;Password=accidentRescuer007;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
         },
         session: {
             secret: "yourSecret",

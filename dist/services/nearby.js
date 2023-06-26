@@ -9,17 +9,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createLoginService = void 0;
-const createLoginService = (loginRepository) => {
+exports.createNearbyService = void 0;
+const notification_1 = require("../notification");
+let accidentLatitude;
+let accidentLongitude;
+let accident_id = -1;
+let accidentUserid;
+const createNearbyService = (nearbyRepository) => {
     return {
-        login: (phone, password) => __awaiter(void 0, void 0, void 0, function* () {
-            const result = yield loginRepository.login(phone, password);
-            return result;
+        nearbyReport: (latitude, longitude, uid, accId) => __awaiter(void 0, void 0, void 0, function* () {
+            const result = yield nearbyRepository.nearbyReport(latitude, longitude, uid, accId);
+            console.log("nerby");
+            console.log("repo", accId);
+            (0, notification_1.sendNotification)(result, accId);
         }),
-        websiteLogin: (email, password) => __awaiter(void 0, void 0, void 0, function* () {
-            const result = yield loginRepository.websiteLogin(email, password);
+        hospitalList: (acc_id) => __awaiter(void 0, void 0, void 0, function* () {
+            const result = yield nearbyRepository.hospitalList(acc_id);
             return result;
         })
     };
 };
-exports.createLoginService = createLoginService;
+exports.createNearbyService = createNearbyService;

@@ -24,6 +24,17 @@ const createRegistrationService = (registrationRepository) => {
             catch (error) {
                 console.log(error.message);
             }
+        }),
+        updateToken: (uid, pushToken) => __awaiter(void 0, void 0, void 0, function* () {
+            const result = yield registrationRepository.updateToken(uid, pushToken);
+        }),
+        SaveHospital: (name, type, latitude, longitude, email, password, role, police_id) => __awaiter(void 0, void 0, void 0, function* () {
+            const result = yield registrationRepository.SaveHospital(name, type, latitude, longitude, email, password, role, police_id);
+            return result;
+        }),
+        SavePolice: (name, latitude, longitude, email, password, role) => __awaiter(void 0, void 0, void 0, function* () {
+            const result = yield registrationRepository.SavePolice(name, latitude, longitude, email, password, role);
+            return result;
         })
     };
 };

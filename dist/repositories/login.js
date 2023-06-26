@@ -9,21 +9,73 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createLoginService = void 0;
-const createLoginService = (config, userRepository) => {
+exports.createLoginRepository = void 0;
+let sql = require("mssql");
+let async = require('async');
+const config_1 = require("../config");
+let config = (0, config_1.loadConfig)();
+const createLoginRepository = () => {
     return {
-        login: (userName, password, headersToForward) => __awaiter(void 0, void 0, void 0, function* () {
-            const { user } = {
-                user: {
-                    fullName: "userName",
-                    message: "",
-                    isAdmin: true,
-                    userPermission: null,
-                    userDataConfiguration: true
+        login: (phone, password) => __awaiter(void 0, void 0, void 0, function* () {
+            try {
+                let pool = yield sql.connect(config.dbConfig.connectionString);
+                let result = yield pool.request().query(`select * from users where phone='${phone}' and pwd='${password}'`);
+                console.log(result);
+                if (result.recordset.length) {
+                    const { user } = {
+                        user: {
+                            uid: result.recordset[0].uid,
+                            firstName: result.recordset[0].firstName
+                        }
+                    };
+                    return user;
                 }
-            };
-            return user;
+                else {
+                    let error = "login unsucessfull";
+                    return error;
+                }
+            }
+            catch (error) {
+                console.log(error.message);
+            }
+        }),
+        websiteLogin: (email, password) => __awaiter(void 0, void 0, void 0, function* () {
+            try {
+                let pool = yield sql.connect(config.dbConfig.connectionString);
+                let result = yield pool.request().query(`select * from hospital where email='${email}' and password='${password}'`);
+                console.log(result.recordset[0].hid);
+                if (result.recordset.length) {
+                    if (result.recordset[0].role == 'hospital') {
+                        const { user } = {
+                            user: {
+                                hid: result.recordset[0].hid,
+                                name: result.recordset[0].name,
+                                role: result.recordset[0].role,
+                                policeId: result.recordset[0].police_id
+                            }
+                        };
+                        return user;
+                    }
+                    else {
+                        const { user } = {
+                            user: {
+                                hid: result.recordset[0].hid,
+                                name: result.recordset[0].name,
+                                role: result.recordset[0].role,
+                            }
+                        };
+                        return user;
+                    }
+                }
+                else {
+                    let error = "login unsucessfull";
+                    return error;
+                }
+            }
+            catch (error) {
+                console.log(error.message);
+            }
         })
     };
 };
-exports.createLoginService = createLoginService;
+exports.createLoginRepository = createLoginRepository;
