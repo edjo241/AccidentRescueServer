@@ -1,6 +1,6 @@
 const web = require('ws');
  export const websocketFunction=()=>{
-  const wss = new web.Server({ port: 8080 });
+  const wss = new web.Server({ port: 8082 });
     const clients:any = [];
     wss.on('connection', (ws:any) => {
       console.log('Client connected ');

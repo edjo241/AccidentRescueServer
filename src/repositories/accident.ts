@@ -7,7 +7,7 @@ let config=loadConfig();
 const {sendMessage}=require('../websocket.ts');
 const web = require('ws');
 
-const ws=new web('ws://192.168.0.163:8080')
+const ws=new web('ws://192.168.30.163:8082')
 export interface AccidentRepository{
     accidentReport:(latitude:Number,longitude:Number,uid:Number)=>any,
     accidentFetch:(acc_id:number)=>any,
